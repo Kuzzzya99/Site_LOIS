@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    /*background: #4e45ef;*/
+    background: white;
+}
+
+h1, h3, p{
+    font-family: 'Courier New', sans-serif;
+    font-size: 20px;
+    color: #808080;
+}
+
+table {
+    border: black;
+}
+
+#formula-div {
+    font-family: 'Courier New', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 30%;
+}
+
+#correct-answer{
+    color: green;
+}
+
+#wrong-answer{
+    color: red;
+}
+
+.btn-check {
+    border: 2px solid #4e45ef;
+    background-color: #C0C0C0;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Francois One', sans-serif;
+    border-color: white;
+    color: white;
+}
+
+.btn-check:hover {
+    background-color: rgba(248, 255, 174, 0.5);
+    /*color: white;*/
+    color: #4e45ef;
+}
+
+.output-field {
+    font-family: 'Francois One', sans-serif;
+    font-size: 20px;
+    /*color: white;*/
+    color: black;
+}

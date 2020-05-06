@@ -1,78 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="back.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>ЛОИС ЛР-1</title>
-  </head>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>LOIS lab №1</title>
+    <script src="js/first.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Лабораторная работа №1</h1>
+<div id="task">
+    <p>Посчитать кол-во подформул в формуле.<br></p>
+</div>
+<div id="answerField">
+    <button class="btn-check" onclick="generate()">Сгенерировать автоматически или</button>
+</div>
+<div id="formula-div">
+    <p>Введите формулу</p> <input type="text" name="formula" id="formula"><br>
+</div>
 
-  <body>
-    <div class='outer' >
-      <h2>Cгенерированная формула :</h2>
-      <h2 id="generate_formula"></h2>
+<div id="formula-div">
+    <p>Введите ответ</p> <input type="text" name="formula" id="user_answer"><br>
+</div>
 
-      <button type="button" class="btn" class='inner1' onclick="choice_option(true)">
-        Новая формула
-      </button>
-      <br>
+<br>
+<div id="answerField">
+    <button class="btn-check" onclick="run()">Проверить</button>
+</div>
+<div id="output-field">
 
-      <input type="text" id="text-number" class='inner' placeholder="Введите ответ" />
+</div>
 
-      <button
-        type="button"
-        onclick="checkUserAnswer();"
-        class="btn"
-        id="result_1"
-        class='inner'
-      >
-        Ответ
-      </button>
-
-      <label class="btn" for="modal-1" class='inner'>Решение</label>
-    </div>
-    <div class="modal">
-      <input class="modal-open" id="modal-1" type="checkbox" hidden />
-      <div class="modal-wrap" aria-hidden="true" role="dialog">
-        <label class="modal-overlay" for="modal-1"></label>
-        <div class="modal-dialog">
-          <div class="modal-header">
-            <h2>Подформулы в формуле</h2>
-          </div>
-          <div class="modal-body">
-            <p id="numberOfAnswers"></p>
-            <p id="listOfSubformuls"></p>
-          </div>
-          <div class="modal-footer">
-            <label class="btn btn-primary" for="modal-1">Выход</label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <label class="btn1" for="modal-2">Ввод формулы</label>
-
-    <div class="modal">
-        <input class="modal-open" id="modal-2" type="checkbox" hidden />
-        <div class="modal-wrap" aria-hidden="true" role="dialog">
-          <label class="modal-overlay" for="modal-2"></label>
-          <div class="modal-dialog">
-            <div class="modal-header">
-              <h2>Введите формулу</h2>
-            </div>
-            <div class="modal-body">
-    
-              <input class="form-control form-control-lg" type="text" placeholder="Введите формулу" style="text-align:center;width:100%;" id="new_formula">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success"  onclick="choice_option(false)" data-dismiss="modal" id="input_formula">Ввести</button>
-              <label class="btn btn-primary" for="modal-2">Выход</label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    
-  </body>
+</body>
 </html>
