@@ -44,6 +44,11 @@ var number = document.getElementById("user_answer").value;
     }
 }
 
+//Показать правильный ответ
+function getAnswer(){
+document.getElementById("output-field").innerHTML = "<p id='correct-answer'>Количество подформул: " + subformulaCount + "</p>";
+} 
+
 // Функция проверки на правильность введённой формулы.
 function isFormula(formula) {
     var tempFormula;

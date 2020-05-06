@@ -61,3 +61,11 @@ table {
     /*color: white;*/
     color: black;
 }
+
+#formula {
+    width: 90%;
+}
+
+#user_answer{
+    width: 90%;
+}
