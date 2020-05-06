@@ -46,7 +46,16 @@ var number = document.getElementById("user_answer").value;
 
 //Показать правильный ответ
 function getAnswer(){
-document.getElementById("output-field").innerHTML = "<p id='correct-answer'>Количество подформул: " + subformulaCount + "</p>";
+    countOfSubformulas = 0;
+    subformulas = [];
+    symbols = [];
+    formula = document.getElementById("formula").value;
+    if (!isFormula(formula)) {
+        alert("Ошибка ввода формулы. Повторите ввод");
+        return 0;}
+
+    subformulaCount = getNumberOfSubformulas(formula); 
+    document.getElementById("output-field").innerHTML = "<p id='correct-answer'>Количество подформул: " + subformulaCount + "</p>";
 } 
 
 // Функция проверки на правильность введённой формулы.
@@ -129,6 +138,7 @@ function clear() {
 
 // Функция генерации формулы
 function generate() {
+    document.getElementById("output-field").innerHTML = "";
     let countOfArgs = getRandomInt(3);
     let countOfGroups = getRandomInt(Math.pow(2, countOfArgs));
     let formula = '';
