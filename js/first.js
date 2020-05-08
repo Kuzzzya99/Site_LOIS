@@ -1,5 +1,5 @@
-// Лабораторная работа №1
-// Вариант А: Подсчёт кол-ва подформул логической формулы.
+// Лабораторная работа №2
+// Вариант 4: Проверить является ли формула нейтральной.
 var formula = "";
 var subformulaCount = 0;
 var ValidFormula = new RegExp('([(][!]([A-Z]|[0-1])[)])|([(]([A-Z]|[0-1])((&)|(\\|)|(->)|(~))([A-Z]|[0-1])[)])', 'g');
@@ -16,6 +16,7 @@ var symbols =[];
 // Функиция запуска выполнения действий проверки введенной формулы и подсчёта кол-ва подстрок.
 function run() {
     clear();
+
     countOfSubformulas = 0;
     subformulas = [];
     symbols = [];
@@ -23,40 +24,21 @@ function run() {
     if (!isFormula(formula)) {
         alert("Ошибка ввода формулы. Повторите ввод");
         return 0;
-
     }
     
-    subformulaCount = getNumberOfSubformulas(formula); 
+    subformulaCount = getNumberOfSubformulas(formula);  
+
+    let isNatural = checkIsNeutral(formula);
+    var tbody = document.getElementById('tbody');
+    tbody.innerHTML = objectToTable(truthTable, symbols);
     checkAnswer();   
-}
-
-// Функция проверки ответа пользователя.
-function checkAnswer(){
-var number = document.getElementById("user_answer").value;
-    if (number == "") {
-    alert("Вы не ввели число подформул.Введите число подформул");
-    return;
-  }
-    if (subformulaCount == number) {
-        document.getElementById("output-field").innerHTML += "<p id='correct-answer'>Вы правы!</p>";
+    if (checkIsNeutral(formula)) {
+        document.getElementById("output-field").innerHTML += "<p id='correct-answer'>Формула является <b>нейтральной</b>.</p>";
     } else {
-        document.getElementById("output-field").innerHTML += "<p id='wrong-answer'>Попробуйте ещё раз.</p>";
+        document.getElementById("output-field").innerHTML += "<p id='wrong-answer'>Формула не является <b>нейтральной</b>.</p>";
     }
+
 }
-
-//Показать правильный ответ
-function getAnswer(){
-    countOfSubformulas = 0;
-    subformulas = [];
-    symbols = [];
-    formula = document.getElementById("formula").value;
-    if (!isFormula(formula)) {
-        alert("Ошибка ввода формулы. Повторите ввод");
-        return 0;}
-
-    subformulaCount = getNumberOfSubformulas(formula); 
-    document.getElementById("output-field").innerHTML = "<p id='correct-answer'>Количество подформул: " + subformulaCount + "</p>";
-} 
 
 // Функция проверки на правильность введённой формулы.
 function isFormula(formula) {

@@ -1,3 +1,4 @@
+
 html {
     height: 100%;
 }
@@ -15,6 +16,14 @@ h1, h3, p{
     font-family: 'Courier New', sans-serif;
     font-size: 20px;
     color: #808080;
+}
+
+
+input, table {
+    font-family: 'Cosmic Sanc', sans-serif;
+    font-size : 18px;
+    color: black;
+    margin: auto;
 }
 
 table {
