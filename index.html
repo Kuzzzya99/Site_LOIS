@@ -17,7 +17,8 @@
     <button class="btn-check" onclick="generate()">Сгенерировать автоматически или</button>
 </div>
 <div id="formula-div">
-    <p>Введите формулу</p> <input type="text" name="formula" id="formula"><br>
+    <p id="message">Введите формулу</p>
+    <input type="text" name="formula" id="formula"><br>
 </div>
 <h1>Выберите ответ</h1>
 
@@ -32,13 +33,13 @@
 <br>
 <div id="answerField">
     <button class="btn-check" onclick="run()">Построить таблицу и узнать ответ</button>
+   
 </div>
 <div id="output-field">
 
 </div>
+
 <h3>Построенная таблица истинности для заданной формулы</h3>
-        <table border="2">
-            <tbody id="tbody"></tbody>
-        </table>
+    <table id="17" border="2"></table>
 </body>
 </html>

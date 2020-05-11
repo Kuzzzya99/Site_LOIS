@@ -29,8 +29,9 @@ function run() {
     subformulaCount = getNumberOfSubformulas(formula);  
 
     let isNatural = checkIsNeutral(formula);
-    var tbody = document.getElementById('tbody');
-    tbody.innerHTML = objectToTable(truthTable, symbols);
+    // var tbody = document.getElementById('tbody');
+    // tbody.innerHTML = objectToTable(truthTable, symbols);
+check();
     checkAnswer();   
     if (checkIsNeutral(formula)) {
         document.getElementById("output-field").innerHTML += "<p id='correct-answer'>Формула является <b>нейтральной</b>.</p>";
@@ -39,6 +40,8 @@ function run() {
     }
 
 }
+
+
 
 // Функция проверки на правильность введённой формулы.
 function isFormula(formula) {
